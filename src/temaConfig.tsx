@@ -9,6 +9,9 @@ const theme = createMuiTheme({
       secondary: {
         main: '#333'
       }
+    },
+    typography: {
+      fontFamily: 'sans-serif'
     }
 
 })

@@ -17,10 +17,6 @@ function App() {
         
         <Navbar/>
 
-         <Button variant= 'contained' color= 'primary'>
-            Mi botón personalizado
-        </Button>  
-
     </ThemeProvider>
   )
 }

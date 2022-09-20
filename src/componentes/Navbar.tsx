@@ -1,51 +1,51 @@
 import React from 'react'
-import imagen_logo_fundacion from '../imagenes/logo-fundación.png'; 
-import imagen_logo_bomberos from '../imagenes/logo-bomberos.png'; 
-
+import imagen_logos from '../imagenes/logos.png'; 
 import { Box } from '@mui/material'
-import { AppBar, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Container, makeStyles, Toolbar, Typography } from '@material-ui/core';
+import { Padding } from '@mui/icons-material';
 
 
-const useStyles = makeStyles(theme => ({
-    offset: theme.mixins.toolbar
-}))
+
+
+const useStyles = makeStyles({
+  title: { //aqui para tratar de dejar solo el texto en medio
+    marginLeft: 250,
+    textAlign: 'center'
+    
+  },
+  
+  logo: { //aqui es donde debería escribir codigo para mover los logos hacia la izq
+    
+
+  }
+  
+})
 
 const Navbar = () => {
   const classes = useStyles()
   return(
     <div>
         <AppBar position='static' color='secondary'>
-
+          <Container maxWidth= 'xl'>
           <Toolbar>
-
             <Box
+              className={classes.logo}
               component='img'
               sx={{
-                height: 64
+                height: 90
               }}
               alt = 'imagenlogo'
-              src={imagen_logo_bomberos}>
-            </Box>
-            
-            <Box
-              component='img'
-              sx={{
-                height: 64
-              }}
-              alt = 'imagenlogo2'
-              src={imagen_logo_fundacion}>
+              src={imagen_logos}>
             </Box>
 
-            <Typography>
+            <Typography
+            className={classes.title}>
               <h2>Fundación Cultural y Deportiva de Bomberos De Chile (FCDBCH)</h2>
-              <h2> Museo virtual</h2>
+              <h1>Museo virtual</h1>
             </Typography> 
-
           </Toolbar>
-         
-        </AppBar>
-      <div className={classes.offset}>
-      </div>
+        </Container>
+      </AppBar>
     </div>
   )
 }
