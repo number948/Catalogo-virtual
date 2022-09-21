@@ -1,50 +1,54 @@
 import React from 'react'
 import imagen_logos from '../imagenes/logos.png'; 
-import { Box } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import { AppBar, Container, makeStyles, Toolbar, Typography } from '@material-ui/core';
-import { Padding } from '@mui/icons-material';
 
 
-
-
-const useStyles = makeStyles({
-  title: { //aqui para tratar de dejar solo el texto en medio
-    marginLeft: 250,
-    textAlign: 'center'
-    
+const useStyles = makeStyles(theme =>({
+  root: {
+    flexGrow:1
   },
-  
-  logo: { //aqui es donde debería escribir codigo para mover los logos hacia la izq
+  title: { //aqui para tratar de dejar solo el texto en medio
+    flexGrow:1,
+    textAlign:"center"
+  },
+  logo: {
     
-
+    height: 60,
+    marginRight: '40px'
   }
-  
-})
+}))
 
 const Navbar = () => {
   const classes = useStyles()
   return(
-    <div>
-        <AppBar position='static' color='secondary'>
-          <Container maxWidth= 'xl'>
-          <Toolbar>
-            <Box
-              className={classes.logo}
-              component='img'
-              sx={{
-                height: 90
-              }}
-              alt = 'imagenlogo'
-              src={imagen_logos}>
-            </Box>
+    <div className={classes.root} >
 
-            <Typography
-            className={classes.title}>
-              <h2>Fundación Cultural y Deportiva de Bomberos De Chile (FCDBCH)</h2>
-              <h1>Museo virtual</h1>
-            </Typography> 
+        <AppBar position='static' color='secondary'>
+          
+          <Container>
+
+          <Toolbar>
+         
+            <img
+            src={imagen_logos}  
+            alt = 'imagenlogo'
+            className={classes.logo}
+            />
+
+            <Stack  direction="column" spacing={3} >
+                <Typography variant='h6' component='h1' align= 'center' className={classes.title}>
+                Fundación Cultural y Deportiva de Bomberos De Chile (FCDBCH)
+                </Typography>
+                <Typography variant='h6' component='h1' align='center' className={classes.title}>
+                  Museo virtual
+                </Typography>
+            </Stack>
+
           </Toolbar>
+
         </Container>
+
       </AppBar>
     </div>
   )

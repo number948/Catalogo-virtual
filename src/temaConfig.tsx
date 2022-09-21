@@ -1,5 +1,6 @@
+//aqui van las configuraciones del tema principal
+
 import { createMuiTheme} from "@mui/material";
-import  purple  from "@mui/material/colors/purple";
 
 const theme = createMuiTheme({
     palette :{
