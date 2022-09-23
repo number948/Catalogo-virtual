@@ -1,28 +1,15 @@
 import  React from 'react';
-import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './temaConfig';
-import { makeStyles } from '@material-ui/core/styles';
-import { Button, Typography } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core/styles';
 import Navbar from './componentes/Navbar';
-import Searchbar from './componentes/Searchbar';
-import Objects_box from './componentes/Objects_box';
-
-
-
+import CatalogoCard from './componentes/CatalogoCard';
 
 function App() {
-
-
-
-  return ( 
-   
+    return ( 
       <ThemeProvider theme={theme}>
-        
-        <Navbar/>
-        <Objects_box/>
-
-
-    </ThemeProvider>
+        <Navbar></Navbar>
+        <CatalogoCard></CatalogoCard>
+      </ThemeProvider>
   )
 }
 
