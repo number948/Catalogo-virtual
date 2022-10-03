@@ -53,9 +53,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 const useStyles = makeStyles(theme =>({
-  logo: {
-   height: 140
-  },
    title:{
     flexGrow: 1,
     marginLeft: theme.spacing(6),
