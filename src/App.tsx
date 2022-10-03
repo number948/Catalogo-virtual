@@ -7,6 +7,7 @@ import Navbar from './componentes/Navbar';
 import CatalogoCard from './componentes/CatalogoCard';
 import FiltersBox from  './componentes/FiltersBox';
 import Grid from '@material-ui/core/Grid'
+import Pagination from './componentes/Pagination'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -32,7 +33,7 @@ function App() {
           <Item>
              <Grid container justify = 'flex-start'>
               <Grid container spacing={8} direction= 'row-reverse' justify='center' >
-                <Grid item xs={12} sm= {6} md={4}>
+                <Grid item xs={8} sm= {6} md={4}>
                   <CatalogoCard></CatalogoCard>
                 </Grid>
                 <Grid item xs={8} sm= {6} md={4}>
@@ -49,7 +50,7 @@ function App() {
           </Item>
         </Grid>
       </Grid>
-      <Paper elevation={0}/>
+      <Pagination/>
     </Box>
       </ThemeProvider>
   )

@@ -83,8 +83,8 @@ const Navbar = () => {
              Fundación Cultural y Deportiva de Bomberos De Chile
           </Typography>
           <Typography
-            variant="h4"
-            className={classes.title}
+            variant="h3"
+            //className={classes.title}
             noWrap>
              Museo Virtual
           </Typography>

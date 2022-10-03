@@ -38,13 +38,17 @@ export default function ActionAreaCard() {
           alt="cubo foto1"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h6" component="div">
             Cubo
           </Typography>
           <Typography variant="body2">
           cuerpo de bomberos de Achao
-          herramientas y equipo
-          XXI
+        </Typography>
+        <Typography variant= "body2">
+        herramientas y equipo
+        </Typography>
+        <Typography variant= "body2">
+        XXI
         </Typography>
         </CardContent>
       </CardActionArea>
