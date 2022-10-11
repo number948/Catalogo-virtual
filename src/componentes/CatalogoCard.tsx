@@ -1,5 +1,5 @@
 import * as React from 'react';
-import imagen_cubo from '../imagenes/bombero-cubo 1.png';
+import imagen_extintor from '../imagenes/extintor 1.jpg';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -12,16 +12,23 @@ const cardUseStyles = makeStyles(theme =>({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingButtom: theme.spacing(8),
-    
   },
   Card: {
-    height: '100%',
+    height: '80%',
     display: 'flex',
     flexDirection: 'column'
   },
   CardMedia: {
-    paddingTop: '56,25%'
-  }
+    paddingTop: '56,25%', 
+    width: '105px',
+    height: '140px'
+    //si quieres que foto se vea completa cambiar width y height a 100% cada uno
+   
+  },
+  CardContent: {
+    paddingTop: '36,25%',
+  
+}
 }))
 
 export default function ActionAreaCard() {
@@ -34,12 +41,12 @@ export default function ActionAreaCard() {
           className= {cardClasses.CardMedia}
           component="img"
           height="140"
-          image={imagen_cubo}
-          alt="cubo foto1"
+          image={imagen_extintor}
+          alt="extintor foto1"
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
-            Cubo
+            Extintor
           </Typography>
           <Typography variant="body2">
           cuerpo de bomberos de Achao

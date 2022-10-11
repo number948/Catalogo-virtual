@@ -23,16 +23,16 @@ function App() {
       <ThemeProvider theme={theme}>
         <Navbar/>
         <Box sx={{ flexGrow: 1 }}>
-      <Grid container>
-        <Grid xs={5}>
+      <Grid container >
+        <Grid xs={4}>
           <Item>
             AQUÍ DEBERÍA IR LA CAJA DE FILTROS
           </Item>
         </Grid>
-        <Grid xs={7}>
+        <Grid xs={8}>
           <Item>
              <Grid container justify = 'flex-start'>
-              <Grid container spacing={8} direction= 'row-reverse' justify='center' >
+              <Grid container spacing={10} direction= 'row-reverse' >
                 <Grid item xs={8} sm= {6} md={4}>
                   <CatalogoCard></CatalogoCard>
                 </Grid>

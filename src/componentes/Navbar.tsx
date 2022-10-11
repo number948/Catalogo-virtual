@@ -55,9 +55,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const useStyles = makeStyles(theme =>({
    title:{
     flexGrow: 1,
-    marginLeft: theme.spacing(6),
-    marginRight: theme.spacing(4)
+    whiteSpace: 'pre-line',
+    marginLeft: theme.spacing(6)
    },
+   secondTitle: {
+    
+   }
   }
     )
       )
@@ -78,15 +81,11 @@ const Navbar = () => {
           </img>
           <Typography
             variant="h5"
+            component='h3'
             className={classes.title}
-            noWrap>
-             Fundación Cultural y Deportiva de Bomberos De Chile
-          </Typography>
-          <Typography
-            variant="h3"
-            //className={classes.title}
-            noWrap>
-             Museo Virtual
+            >
+            Fundación Cultural y Deportiva de Bomberos De Chile 
+            Museo Virtual
           </Typography>
           <Search>
             <SearchIconWrapper>
