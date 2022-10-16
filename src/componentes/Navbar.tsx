@@ -56,10 +56,8 @@ const useStyles = makeStyles(theme =>({
    title:{
     flexGrow: 1,
     whiteSpace: 'pre-line',
-    marginLeft: theme.spacing(6)
-   },
-   secondTitle: {
-    
+    marginLeft: theme.spacing(6),
+    fontFamily: 'helvatica'
    }
   }
     )
