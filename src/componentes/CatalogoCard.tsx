@@ -11,7 +11,9 @@ import { Container, makeStyles } from '@material-ui/core';
 import theme from '../temaConfig';
 
 export default function ActionAreaCard(props: CardProps ) {
+
   const cardClasses = cardUseStyles();
+
   return (
     <Container className= {cardClasses.cardGrid}>
     <Card sx={{ maxWidth: 345}}>
@@ -19,7 +21,7 @@ export default function ActionAreaCard(props: CardProps ) {
         <CardMedia
           className= {cardClasses.CardMedia}
           component="img"
-          height="120"
+          height="300"
           src={props.image}
           alt="bomberos-fotos"
         />

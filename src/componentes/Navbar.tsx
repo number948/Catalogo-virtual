@@ -67,7 +67,7 @@ const Navbar = () => {
   const classes = useStyles()
   return(
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" elevation = {0} >
         <Toolbar>
         <img
             src={imagen_bomberos}  
@@ -82,8 +82,8 @@ const Navbar = () => {
             component='h3'
             className={classes.title}
             >
-            Fundación Cultural y Deportiva de Bomberos De Chile 
-            Museo Virtual
+            Fundación Cultural y Deportiva de Bomberos De Chile {"\n"} 
+             Museo Virtual
           </Typography>
           <Search>
             <SearchIconWrapper>

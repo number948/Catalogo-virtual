@@ -5,6 +5,7 @@ import { styled, ThemeProvider } from '@material-ui/core/styles';
 import { Paper } from '@mui/material';
 import Navbar from './componentes/Navbar';
 import CatalogoCard from './componentes/CatalogoCard';
+import ObjectCard from './componentes/ObjectCard';
 import Grid from '@material-ui/core/Grid';
 import Pagination from './componentes/Pagination';
 
@@ -12,11 +13,14 @@ import imagen_extintor from './imagenes/extintor1.jpg';
 import imagen_cubo from './imagenes/bombero-cubo1.png';
 import imagen_esclavina from './imagenes/esclavina1.jpg';
 import imagen_pera from './imagenes/pera1.jpg'
+import MyFilters from './componentes/MyFilters';
+import Catalogue from './componentes/CatalogueBody';
 
 const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(20),
   textAlign: 'center',
   color: theme.palette.text.secondary,
+  
 }));
 
 function App() {
@@ -24,47 +28,58 @@ function App() {
       <ThemeProvider theme={theme}>
         <Navbar/>
         <Box sx={{ flexGrow: 1 }}>
+          <Grid container>
+            <Grid xs={3}>
+            <MyFilters/>
+            </Grid>
+            <Grid container xs={9}>
+            <Catalogue/>
+            </Grid>
+          </Grid>
+
+        </Box>
+        {/* <Box sx={{ flexGrow: 1 }}>
       <Grid container >
         <Grid xs={4}>
-          <Item>
-            AQUÍ DEBERÍA IR LA CAJA DE FILTROS
+          <Item elevation= {0}>
+            <MyFilters/>
           </Item>
         </Grid>
         <Grid xs={8}>
-          <Item>
+          <Item elevation= {0}>
              <Grid container justify = 'flex-start'>
               <Grid container spacing={10} direction= 'row-reverse' >
                 <Grid item xs={8} sm= {6} md={4}>
-                  <CatalogoCard
+                  <ObjectCard
                   image = {imagen_pera}
                   name = 'PERA'
-                  fire_department = 'Cuerpo de Bomberos de Achao'
+                  department = 'Cuerpo de Bomberos de Achao'
                   typology = 'Herramientas y equipo'
-                  century='XXI'></CatalogoCard>
+                  century='XXI'></ObjectCard>
                 </Grid>
                 <Grid item xs={8} sm= {6} md={4}>
-                  <CatalogoCard
+                  <ObjectCard
                   image = {imagen_esclavina}
                   name = 'ESCLAVINA'
-                  fire_department = 'Cuerpo de Bomberos de Talca'
+                  department = 'Cuerpo de Bomberos de Talca'
                   typology = 'Herramientas y equipo'
-                  century='XXI'></CatalogoCard>
+                  century='XXI'></ObjectCard>
                 </Grid>
                 <Grid item xs={8} sm= {6} md={4}>
-                  <CatalogoCard
+                  <ObjectCard
                   image = {imagen_cubo}
                   name = 'CUBO'
-                  fire_department = 'Cuerpo de Bomberos de Talca'
+                  department = 'Cuerpo de Bomberos de Talca'
                   typology = 'Herramientas y equipo'
-                  century='XXI'></CatalogoCard>
+                  century='XXI'></ObjectCard>
                 </Grid>
                 <Grid item xs={8} sm= {6} md={4}>
-                  <CatalogoCard
+                  <ObjectCard
                   image = {imagen_extintor}
                   name = 'EXTINTOR'
-                  fire_department = 'Cuerpo de Bomberos de Talca'
+                  department = 'Cuerpo de Bomberos de Talca'
                   typology= 'Herramientas y equipo'
-                  century='XXI'></CatalogoCard>
+                  century='XXI'></ObjectCard>
                 </Grid>
               </Grid>
            </Grid>
@@ -72,7 +87,7 @@ function App() {
         </Grid>
       </Grid>
       <Pagination/>
-    </Box>
+    </Box> */}
       </ThemeProvider>
   )
 }
