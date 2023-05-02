@@ -1,3 +1,6 @@
+Proyecto de título, catálogo virtual que consisitió en presentar imágenes de Bomberos en formato virtual.
+Esta parte del proyecto es el Front end.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
